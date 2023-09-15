@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"noEmit": true,
+		"module": "Node16",
+		"target": "esnext",
+		"lib": ["esnext"],
+		"strict": true,
+		"moduleResolution": "Node16",
+		"allowImportingTsExtensions": true,
+		"types": ["@cloudflare/workers-types"]
+	},
+	"exclude": ["node_modules", "dist", "test"]
+}

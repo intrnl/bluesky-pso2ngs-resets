@@ -1,0 +1,6 @@
+name = "bluesky-pso2ngs-resets"
+main = "./src/index.ts"
+compatibility_date = "2023-09-04"
+
+[triggers]
+crons = [ "0 12 * * *", "0 12 * * 3" ]
