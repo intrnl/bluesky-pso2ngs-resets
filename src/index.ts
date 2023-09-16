@@ -12,7 +12,7 @@ interface Env {
 type PostRecord = Records['app.bsky.feed.post'];
 
 const DAILY_CRON = '0 12 * * *';
-const WEEKLY_CRON = '0 12 * * 3';
+const WEEKLY_CRON = '0 3 * * 3';
 
 const dateformatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long' });
 
