@@ -1,6 +1,3 @@
 {
-	"recommendations": [
-		"esbenp.prettier-vscode",
-		"tamasfe.even-better-toml"
-	]
+	"recommendations": ["esbenp.prettier-vscode", "tamasfe.even-better-toml"]
 }
