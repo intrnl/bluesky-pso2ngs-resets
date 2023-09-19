@@ -7,4 +7,4 @@ crons = ["0 12 * * *", "0 3 * * 3"]
 
 [vars]
 BLUESKY_SERVICE = "https://bsky.social"
-BLUESKY_USERNAME = "@pso2ngs-resets.bsky.social"
+BLUESKY_USERNAME = "pso2ngs-resets.bsky.social"
