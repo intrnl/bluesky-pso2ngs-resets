@@ -46,7 +46,7 @@ const handlers: ExportedHandler<Env> = {
 				message += '\n' + event.formatEvent(next.index);
 			}
 		} else if (isWeeklyCron) {
-			message += `#PSO2NGS ${date} weekly reset`;
+			message += `#PSO2NGS ${date} weekly reset\nAlliance tasks:`;
 
 			for (const event of WEEKLY_EVENTS) {
 				const next = getNextOccurence(ms, event.start, event.occurence);

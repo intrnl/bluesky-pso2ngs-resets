@@ -91,31 +91,51 @@ export const DAILY_EVENTS: ScheduledEvent[] = [
 ];
 
 // Weekly events
-const ALLIANCE_REGION_SEQUENCE = ['Stia', 'Aelio', 'Retem', 'Kvaris'];
+const ALLIANCE_REGION_SEQUENCE = ['Aelio', 'Retem', 'Kvaris', 'Stia'];
 const ALLIANCE_AUGMENT_SEQUENCE = ['Note A', 'Note B', 'Note C', 'Note D'];
-const ALLIANCE_RARE_SEQUENCE = ['Gold', 'Silver'];
-const ALLIANCE_RACE_SEQUENCE = ['Board', 'Dash'];
+const ALLIANCE_RARE_SEQUENCE = ['Silver', 'Gold'];
+const ALLIANCE_RACE_SEQUENCE = ['Dash', 'Board'];
 const ALLIANCE_RANDOM_SEQUENCE = ['Kudos', 'Region Mags', 'Battledia Yellow'];
 
 export const WEEKLY_EVENTS: ScheduledEvent[] = [
 	{
-		start: utc(2023, 1, 22, 3),
+		start: utc(2023, 1, 1, 3),
 		occurence: Occurence.WEEKLY,
 		formatEvent: (seq) => {
 			const region = getSequence(ALLIANCE_REGION_SEQUENCE, seq);
+			return `- ${region} region`;
+		},
+	},
+	{
+		start: utc(2023, 1, 22, 3),
+		occurence: Occurence.WEEKLY * 4,
+		formatEvent: (seq) => {
 			const augment = getSequence(ALLIANCE_AUGMENT_SEQUENCE, seq);
-			const rareEnemy = getSequence(ALLIANCE_RARE_SEQUENCE, seq);
-			const fieldRace = getSequence(ALLIANCE_RACE_SEQUENCE, seq);
+			return `- ${augment} augment`;
+		},
+	},
+	{
+		start: utc(2023, 1, 1, 3),
+		occurence: Occurence.WEEKLY,
+		formatEvent: (seq) => {
+			const rare = getSequence(ALLIANCE_RARE_SEQUENCE, seq);
+			return `- ${rare} rare enemy`;
+		},
+	},
+	{
+		start: utc(2023, 1, 1, 3),
+		occurence: Occurence.WEEKLY,
+		formatEvent: (seq) => {
+			const race = getSequence(ALLIANCE_RACE_SEQUENCE, seq);
+			return `- ${race} field race`;
+		},
+	},
+	{
+		start: utc(2023, 1, 1, 3),
+		occurence: Occurence.WEEKLY,
+		formatEvent: (seq) => {
 			const random = getSequence(ALLIANCE_RANDOM_SEQUENCE, seq);
-
-			return (
-				`Alliance tasks:\n` +
-				`  - ${region} region\n` +
-				`  - ${augment} augment\n` +
-				`  - ${rareEnemy} rare enemy\n` +
-				`  - ${fieldRace} field race\n` +
-				`  - ${random} random task`
-			);
+			return `- ${random} random task`;
 		},
 	},
 ];
